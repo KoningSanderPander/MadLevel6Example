@@ -6,8 +6,10 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
+import kotlinx.android.synthetic.main.activity_trivia.*
 import nl.svdoetelaar.madlevel6example.R
 import nl.svdoetelaar.madlevel6example.viewmodel.TriviaViewModel
 
@@ -19,7 +21,7 @@ class TriviaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_trivia)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
+        fab.setOnClickListener {
             viewModel.getTriviaNumber()
         }
     }

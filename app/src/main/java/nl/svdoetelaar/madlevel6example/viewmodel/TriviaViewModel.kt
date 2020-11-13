@@ -15,7 +15,7 @@ class TriviaViewModel(application: Application) : AndroidViewModel(application) 
     private val _errorText: MutableLiveData<String> = MutableLiveData()
     val errorText: LiveData<String> get() = _errorText
 
-    fun getTriviaNumber(){
+    fun getTriviaNumber() {
         viewModelScope.launch {
             try {
                 triviaRepository.getRandomNumberTrivia()

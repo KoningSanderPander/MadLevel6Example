@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class TriviaApi {
     companion object {
         private const val baseUrl = "http://numbersapi.com/"
-        fun createApi(): TriviaApiService{
+        fun createApi(): TriviaApiService {
             val okHttpClient = OkHttpClient.Builder()
                 .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
                 .build()
