@@ -34,12 +34,11 @@ class TriviaFragment : Fragment() {
     }
 
     private fun observeTrivia() {
-        viewModel.trivia.observe(viewLifecycleOwner, Observer {
+        viewModel.trivia.observe(viewLifecycleOwner, {
             tvTrivia.text = it?.text
         })
 
-        // Observe the error message.
-        viewModel.errorText.observe(viewLifecycleOwner, Observer {
+        viewModel.errorText.observe(viewLifecycleOwner, {
             Toast.makeText(activity, it, Toast.LENGTH_SHORT).show()
         })
     }
